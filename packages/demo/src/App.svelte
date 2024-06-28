@@ -38,6 +38,7 @@
   import bitgetModule from '@web3-onboard/bitget'
   import bloomModule from '@web3-onboard/bloom'
   import particleAuthModule from '@web3-onboard/particle-network'
+  import finoaConnectModule from '@web3-onboard/finoaconnect'
   import capsuleModule, {
     Environment,
     OAuthMethod
@@ -227,6 +228,7 @@
     fallbackProvider: '' // insert your alchemy / infura url here
     // encryptionSecret: '' // encryption secret is optional, but advised to securely store values in browser storage
   })
+  const finoaConnect = finoaConnectModule()
 
   const trezorOptions = {
     email: 'test@test.com',
@@ -322,7 +324,8 @@
       blocto,
       venly,
       particle,
-      passport
+      passport,
+      finoaConnect
     ],
     transactionPreview,
     gas,
